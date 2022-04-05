@@ -5,7 +5,8 @@
  */
 package com.fges.fges_plage.widgets;
 
-import com.fges.fges_plage.DonneeStation;
+import com.fges.fges_plage.Station.DonneeStation;
+
 import java.io.PrintStream;
 
 /**

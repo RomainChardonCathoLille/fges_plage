@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.fges.fges_plage;
+package com.fges.fges_plage.Threads;
 import com.fges.fges_plage.widgets.Widget;
 import java.util.List;
 

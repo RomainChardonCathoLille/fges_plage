@@ -3,7 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.fges.fges_plage;
+package com.fges.fges_plage.Threads;
+
+import com.fges.fges_plage.Interfaces.DonneeStationObservable;
+import com.fges.fges_plage.Station.DonneeStation;
+import com.fges.fges_plage.Station.Station;
 
 /**
  *
@@ -12,8 +16,10 @@ package com.fges.fges_plage;
 public class ThreadStationMeteo extends Thread {
     
     protected Station station;
+    protected DonneeStationObservable observable;
     
-    public ThreadStationMeteo(Station station){
+    public ThreadStationMeteo(Station station, DonneeStationObservable donneeStationObservable){
+        this.observable = donneeStationObservable;
         this.station = station;
     }
     
@@ -25,6 +31,7 @@ public class ThreadStationMeteo extends Thread {
             System.out.println("Température air : "+donnees.getTemperatureAir());
             System.out.println("Vent : "+donnees.getVent());
             System.out.println("Bactéries par 100ml : "+donnees.getNbBacteriesPar100ml());
+            this.observable.notifierObservateurs(donnees);
         }
     }
 }

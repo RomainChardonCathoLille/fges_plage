@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 package com.fges.fges_plage.widgets;
-import com.fges.fges_plage.DonneeStation;
+import com.fges.fges_plage.Station.DonneeStation;
+
 import java.io.PrintStream;
 
 /**
@@ -29,5 +30,4 @@ public class WidgetDrapeau
             stream.println("Drapeau Orange : baignage autorisée mais soyez prudents !");
         }
     }
-    
 }

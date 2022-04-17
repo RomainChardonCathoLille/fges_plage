@@ -35,6 +35,7 @@ public class App {
         widgets.add(new WidgetDrapeau(donneeStation));
         widgets.add(new WidgetQualiteEau(donneeStation));
         widgets.add(new WidgetTemperature(donneeStation));
+        widgets.add(new WidgetCharAVoile(donneeStation));
 
         // Abonnement station & widgets
         DonneeStationObervableImpl observable = new DonneeStationObervableImpl();
